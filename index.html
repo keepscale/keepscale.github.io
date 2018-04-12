@@ -36,6 +36,28 @@
 	<script type="text/javascript" src="js/wow.js"></script>
 	<script type="text/javascript" src="js/classie.js"></script>
 
+	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+	<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+	<script>
+	window.addEventListener("load", function(){
+		window.cookieconsent.initialise({
+			"palette": {
+				"popup": {
+				"background": "#252e39"
+				},
+				"button": {
+				"background": "#14a7d0"
+				}
+			},
+			"content": {
+				"message": "Nous utilisons Google Analytics dans le but de mieux connaitre l'audience du site.",
+				"dismiss": "Ok",
+				"link": "En savoir plus",
+				"href": "https://policies.google.com/privacy"
+			}
+		})
+	});
+	</script>
 </head>
 
 <body>
