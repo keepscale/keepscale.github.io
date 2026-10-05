@@ -1,343 +1,469 @@
 <!doctype html>
-<html>
-
+<html lang="fr">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Développement d'applications web à Nancy | KeepScale</title>
+	<meta name="description" content="KeepScale, à Nancy : applications web sur mesure en Java, Spring Boot et Angular, modernisation, audit de performance et de sécurité, DevOps et formation.">
+	<meta name="author" content="KeepScale">
+	<meta name="robots" content="index, follow, max-image-preview:large">
+	<link rel="canonical" href="https://www.keepscale.fr/">
+	<meta name="theme-color" content="#0f2238">
+	<meta name="referrer" content="strict-origin-when-cross-origin">
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-Du+OJKJSbdUgz5nrHeWWINvez6XKDDU/tyj/5c2uvwo='; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'self'; object-src 'none'">
+	<script>document.documentElement.classList.add('js')</script>
 
-	<title>KeepScale</title>
-	<meta name="keywords" content="développement, application, web, webapp, audit, optimisation, sql, angular, java, jahia, postgres, keepscale" />
-	<meta name="robots" content="index,follow" />
+	<!-- Partage sur les réseaux -->
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="fr_FR">
+	<meta property="og:site_name" content="KeepScale">
+	<meta property="og:url" content="https://www.keepscale.fr/">
+	<meta property="og:title" content="KeepScale — Architecture et développement d'applications web à Nancy">
+	<meta property="og:description" content="Applications web sur mesure, modernisation, audit de performance et de sécurité, DevOps, accompagnement d'équipes et formation.">
+	<meta property="og:image" content="https://www.keepscale.fr/img/og-keepscale.png">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<meta property="og:image:alt" content="KeepScale — Architecture et développement d'applications web">
+	<meta name="twitter:card" content="summary_large_image">
 
-	<link rel="shortcut icon" href="/favicon.ico" type="img/x-icon">
+	<link rel="icon" href="/favicon.ico" sizes="32x32">
+	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+	<link rel="stylesheet" href="/assets/style.css">
+	<script src="/assets/main.js" defer></script>
 
-	<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-	<link href="css/style.css" rel="stylesheet" type="text/css">
-	<link href="css/fontawesome-all.min.css" rel="stylesheet" type="text/css">
-	<link href="css/responsive.css" rel="stylesheet" type="text/css">
-	<link href="css/animate.css" rel="stylesheet" type="text/css">
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117375459-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-117375459-1');
-	</script>
-
-
-	<script type="text/javascript" src="js/jquery.1.8.3.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.js"></script>
-	<script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
-	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="js/jquery.isotope.js"></script>
-	<script type="text/javascript" src="js/wow.js"></script>
-	<script type="text/javascript" src="js/classie.js"></script>
-
-	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
-	<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
-	<script>
-	window.addEventListener("load", function(){
-		window.cookieconsent.initialise({
-			"palette": {
-				"popup": {
-				"background": "#252e39"
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@graph": [
+			{
+				"@type": "ProfessionalService",
+				"@id": "https://www.keepscale.fr/#organisation",
+				"name": "KeepScale",
+				"url": "https://www.keepscale.fr/",
+				"logo": "https://www.keepscale.fr/img/keepscale-logo.png",
+				"image": "https://www.keepscale.fr/img/og-keepscale.png",
+				"description": "Architecture logicielle, développement d'applications web sur mesure (Java, Spring Boot, Angular), modernisation, audit de performance et de sécurité, DevOps et formation.",
+				"email": "contact@keepscale.fr",
+				"telephone": "+33683499705",
+				"address": {
+					"@type": "PostalAddress",
+					"addressLocality": "Nancy",
+					"postalCode": "54000",
+					"addressRegion": "Grand Est",
+					"addressCountry": "FR"
 				},
-				"button": {
-				"background": "#14a7d0"
+				"areaServed": [
+					{ "@type": "City", "name": "Nancy" },
+					{ "@type": "AdministrativeArea", "name": "Grand Est" },
+					{ "@type": "Country", "name": "France" }
+				],
+				"sameAs": ["https://github.com/keepscale"],
+				"knowsAbout": ["Architecture logicielle", "Java", "Spring Boot", "Angular", "Microservices", "OpenID Connect", "DevOps", "PostgreSQL", "Haute disponibilité", "Audit de performance", "Sécurité applicative"],
+				"hasOfferCatalog": {
+					"@type": "OfferCatalog",
+					"name": "Services",
+					"itemListElement": [
+						{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Architecture et conception logicielle" } },
+						{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Développement d'applications web sur mesure" } },
+						{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Modernisation et migration d'applications Java" } },
+						{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Audit de performance et de sécurité applicative" } },
+						{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Identité numérique, SSO et OpenID Connect" } },
+						{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "DevOps, intégration continue et haute disponibilité" } },
+						{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tech lead et accompagnement d'équipes" } },
+						{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Formation Java, Spring Boot et Angular" } },
+						{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sites e-commerce et CMS" } }
+					]
 				}
 			},
-			"content": {
-				"message": "Nous utilisons Google Analytics dans le but de mieux connaitre l'audience du site.",
-				"dismiss": "Ok",
-				"link": "En savoir plus",
-				"href": "https://policies.google.com/privacy"
+			{
+				"@type": "WebSite",
+				"@id": "https://www.keepscale.fr/#site",
+				"url": "https://www.keepscale.fr/",
+				"name": "KeepScale",
+				"inLanguage": "fr-FR",
+				"publisher": { "@id": "https://www.keepscale.fr/#organisation" }
+			},
+			{
+				"@type": "FAQPage",
+				"@id": "https://www.keepscale.fr/#faq",
+				"mainEntity": [
+					{
+						"@type": "Question",
+						"name": "Intervenez-vous à distance ou sur site ?",
+						"acceptedAnswer": { "@type": "Answer", "text": "Les deux. Nous travaillons à distance pour des clients partout en France et intervenons sur site à Nancy et dans le Grand Est, notamment pour les ateliers de cadrage, les audits et les formations." }
+					},
+					{
+						"@type": "Question",
+						"name": "Pouvez-vous reprendre une application existante ?",
+						"acceptedAnswer": { "@type": "Answer", "text": "Oui. Nous commençons par un état des lieux (code, architecture, dépendances, exploitation), puis nous proposons un plan priorisé : corrections urgentes, montées de version, réduction de la dette technique et évolutions fonctionnelles." }
+					},
+					{
+						"@type": "Question",
+						"name": "Sous quelle forme pouvez-vous intervenir ?",
+						"acceptedAnswer": { "@type": "Answer", "text": "Audit court sur quelques jours, mission d'accompagnement ou de tech lead aux côtés de votre équipe, développement au forfait sur un périmètre défini, ou formation sur mesure." }
+					},
+					{
+						"@type": "Question",
+						"name": "Proposez-vous des formations ?",
+						"acceptedAnswer": { "@type": "Answer", "text": "Oui. Nous concevons des formations sur mesure pour les équipes de développement, construites à partir de leurs projets : Java moderne, Spring Boot, Angular, tests automatisés, sécurité et bonnes pratiques." }
+					},
+					{
+						"@type": "Question",
+						"name": "Combien coûte une prestation ?",
+						"acceptedAnswer": { "@type": "Answer", "text": "Chaque besoin est différent. Après un premier échange gratuit et sans engagement, nous vous adressons une proposition chiffrée détaillant le périmètre, le format et le planning." }
+					}
+				]
 			}
-		})
-	});
+		]
+	}
 	</script>
 </head>
 
 <body>
-	<header class="header" id="header">
-		<!--header-start-->
-		<div class="container">
-			<figure class="logo animated fadeInDown delay-05s">
-				<a href="#"><img src="img/total.png" alt=""></a>
-			</figure>
-			<ul class="we-create ">
-				<li class="animated fadeInUp delay-05s">Nous réalisons des applications web</li>
-				<li class="animated fadeInUp delay-2s">Dimensionnés à vos besoins</li>
-			</ul>
+	<svg xmlns="http://www.w3.org/2000/svg" class="sprite" aria-hidden="true">
+		<symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7z"/><path d="m2 12 10 5 10-5"/><path d="m2 17 10 5 10-5"/></symbol>
+		<symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></symbol>
+		<symbol id="i-refresh" viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16"/><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8"/><path d="M21 3v5h-5"/><path d="M3 21v-5h5"/></symbol>
+		<symbol id="i-gauge" viewBox="0 0 24 24"><path d="m12 14 4-4"/><path d="M3.3 19a10 10 0 1 1 17.4 0"/></symbol>
+		<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+		<symbol id="i-server" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="7" rx="2"/><rect x="2" y="14" width="20" height="7" rx="2"/><path d="M6 6.5h.01M6 17.5h.01"/></symbol>
+		<symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
+		<symbol id="i-graduation" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></symbol>
+		<symbol id="i-cart" viewBox="0 0 24 24"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2 2h2l2.7 12.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L22 7H5.1"/></symbol>
+		<symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+		<symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+		<symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+		<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+	</svg>
+
+	<a class="skip-link" href="#contenu">Aller au contenu</a>
+
+	<header class="site-header">
+		<div class="container header-inner">
+			<a class="brand" href="/" aria-label="KeepScale, accueil">
+				<svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="10" width="6" height="12" rx="3"/><rect class="light" x="13" y="3" width="6" height="26" rx="3"/><rect x="23" y="7" width="6" height="17" rx="3"/></svg>
+				<span class="brand-name">Keep<span>scale</span></span>
+			</a>
+			<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">
+				<span class="nav-toggle-bar"></span><span class="visually-hidden">Menu</span>
+			</button>
+			<nav class="site-nav" id="menu" aria-label="Navigation principale">
+				<ul>
+					<li><a href="#services">Services</a></li>
+					<li><a href="#expertise">Expertise</a></li>
+					<li><a href="#methode">Méthode</a></li>
+					<li><a href="#engagements">Engagements</a></li>
+					<li><a href="#faq">FAQ</a></li>
+					<li><a class="btn btn-small" href="#contact">Contact</a></li>
+				</ul>
+			</nav>
 		</div>
 	</header>
-	<!--header-end-->
 
-	<nav class="main-nav-outer" id="test">
-		<!--main-nav-start-->
-		<div class="container">
-			<ul class="main-nav">
-				<li><a href="#header">Accueil</a></li>
-				<li><a href="#service">Services</a></li>
-				<li class="small-logo"><a href="#header"><img src="img/small-logo.png" alt=""></a></li>
-				<li><a href="#techno">Technos</a></li>
-				<li><a href="#contact">Contact</a></li>
-			</ul>
-			<a class="res-nav_click" href="#"><i class="fa-bars"></i></a>
-		</div>
-	</nav>
-	<!--main-nav-end-->
-
-
-
-	<section class="main-section" id="service">
-		<!--main-section-start-->
-		<div class="container">
-			<h2>Services</h2>
-			<h6>Notre principale activité, c'est le développement d'application web. <br/>
-				Mais notre expérience, nos réalisations et la veille permanente nous permettent de vous accompagner à toutes les étapes de votre projet.
-			</h6>
-			<div class="row">
-				<div class="col-lg-4 col-sm-6 wow fadeInLeft delay-05s">
-					<div class="service-list">
-						<div class="service-list-col1">
-							<i class="fa-code"></i>
-						</div>
-						<div class="service-list-col2">
-							<h3>Développement</h3>
-							<p>Notre coeur de métier: Vous nous exprimez vos besoins, nous développons l'application qui y répond. Au minimum.</p>
-						</div>
-					</div>
-					<div class="service-list">
-						<div class="service-list-col1">
-							<i class="fa-sitemap"></i>
-						</div>
-						<div class="service-list-col2">
-							<h3>eCommerce, CMS</h3>
-							<p>Chaque plateforme a ses spécificités, nous en connaissons beaucoup. Nous sommes réellement expert sur quelques unes.</p>
-						</div>
-					</div>
-					<div class="service-list">
-						<div class="service-list-col1">
-							<i class="fa-cogs"></i>
-						</div>
-						<div class="service-list-col2">
-							<h3>Audit, optimisations et performances</h3>
-							<p>HA, SQL performance, failover, caching, optimisation d'algorithme, revue: Notre expertise pour vous accompagner sur vos projets critiques.</p>
-						</div>
-					</div>
-					<div class="service-list">
-						<div class="service-list-col1">
-							<i class="fa-graduation-cap"></i>
-						</div>
-						<div class="service-list-col2">
-							<h3>Conseils & Formations</h3>
-							<p>Nous partageons nos compétences par le biais de conseils et de formations sur-mesures.</p>
-						</div>
-					</div>
+	<main id="contenu">
+		<section class="hero" aria-labelledby="titre">
+			<div class="container hero-inner">
+				<p class="eyebrow">Architecture et développement logiciel · Nancy</p>
+				<h1 id="titre">Des applications web robustes, <span class="accent">dimensionnées à vos besoins.</span></h1>
+				<p class="lead">KeepScale conçoit, développe et fait évoluer des applications web fiables et sécurisées en Java, Spring&nbsp;Boot et Angular. Nous accompagnons PME, éditeurs de logiciels et grands comptes de la conception à la mise en production&nbsp;: architecture, développement, modernisation, audit et montée en compétences des équipes.</p>
+				<div class="hero-actions">
+					<a class="btn" href="#contact">Parler de votre projet <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+					<a class="btn btn-ghost" href="#services">Voir les services</a>
 				</div>
-				<figure class="col-lg-8 col-sm-6  text-right wow fadeInUp delay-02s">
-					<img src="img/macbook-pro.png" alt="">
-				</figure>
-
-			</div>
-		</div>
-	</section>
-	<!--main-section-end-->
-
-
-	<section class="main-section paddind" id="techno">
-		<!--main-section-start-->
-		<div class="container">
-			<h2>Technologies</h2>
-			<h6>Un aperçu des technologies que nous maitrisons</h6>
-			<div class="technoFilter">
-				<ul class="techno-nav wow fadeIn delay-02s">
-					<li><a href="#" data-filter="*" class="current">Tous</a></li>
-					<li><a href="#" data-filter=".dev">Dév</a></li>
-					<li><a href="#" data-filter=".plateform">Plateforme</a></li>
-					<li><a href="#" data-filter=".ops">Ops</a></li>
+				<ul class="key-figures">
+					<li><strong>De bout en bout</strong><span>du cadrage à l'exploitation en production</span></li>
+					<li><strong>Projets critiques</strong><span>santé, banque, télécoms et secteur public</span></li>
+					<li><strong>Sécurité intégrée</strong><span>dès la conception, jusqu'à l'audit</span></li>
+					<li><strong>Autonomie</strong><span>documentation et formation de vos équipes</span></li>
 				</ul>
 			</div>
+		</section>
 
-		</div>
-		<div class="technoContainer wow fadeInUp delay-04s">
-			<div class=" techno-box dev">
-				<a href="#"><img src="img/techno-java.png" alt=""></a>
-				<h3>Java</h3>
-				<p>dev</p>
-			</div>
-			<div class="techno-box dev">
-				<a href="#"><img src="img/techno-angular.png" alt=""></a>
-				<h3>Angular</h3>
-				<p>dev</p>
-			</div>
-			<div class=" techno-box dev">
-				<a href="#"><img src="img/techno-html-css-javascript.png" alt=""></a>
-				<h3>Web</h3>
-				<p>dev</p>
-			</div>
-			<div class=" techno-box dev">
-				<a href="#"><img src="img/techno-spring.png" alt=""></a>
-				<h3>Spring Framework</h3>
-				<p>dev</p>
-			</div>
-			<div class=" techno-box plateform">
-				<a href="#"><img src="img/techno-jahia.png" alt=""></a>
-				<h3>Jahia</h3>
-				<p>plateform</p>
-			</div>
-			<div class=" techno-box plateform">
-				<a href="#"><img src="img/techno-prestashop.png" alt=""></a>
-				<h3>Prestashop</h3>
-				<p>plateform</p>
-			</div>
-			<div class=" techno-box ops">
-				<a href="#"><img src="img/techno-haproxy.png" alt=""></a>
-				<h3>HA Proxy</h3>
-				<p>ops</p>
-			</div>
-			<div class=" techno-box ops">
-				<a href="#"><img src="img/techno-postgres.png" alt=""></a>
-				<h3>PostgreSQL</h3>
-				<p>ops</p>
-			</div>
-			<div class=" techno-box ops">
-				<a href="#"><img src="img/techno-linux.png" alt=""></a>
-				<h3>Linux</h3>
-				<p>ops</p>
-			</div>
-		</div>
-	</section>
-	<!--main-section-end-->
-
-
-	<div class="container">
-		<section class="main-section contact" id="contact">
+		<section class="section" id="services" aria-labelledby="titre-services">
 			<div class="container">
-				<h2>Contactez-nous</h2>			
-			</div>
-			<div class="row">
-				<div class="col-sm-6 wow fadeInLeft">
-				
-					<div class="contact-info-box address clearfix">
-						<h3><i class="fa-map-marker"></i>Adresse:</h3>
-						<span>Nous sommes à Nancy, dans l'Est de la France</span>
-					</div>
-					<div class="contact-info-box phone clearfix">
-						<h3><i class="fa-phone"></i>Téléphone:</h3>
-						<span>+336 83 49 97 05</span>
-					</div>
+				<header class="section-head reveal">
+					<p class="eyebrow">Services</p>
+					<h2 id="titre-services">Un interlocuteur unique, du cadrage à l'exploitation</h2>
+					<p>Le développement d'applications web est notre cœur de métier. Notre expérience en architecture, en pilotage technique et en DevOps nous permet de vous accompagner à chaque étape de votre projet, ou d'intervenir précisément là où vous en avez besoin.</p>
+				</header>
+				<div class="cards">
+					<article class="card reveal">
+						<svg class="card-icon" aria-hidden="true"><use href="#i-layers"/></svg>
+						<h3>Architecture et conception</h3>
+						<p>Des choix techniques solides avant la première ligne de code, pour une application qui évolue sans tout réécrire.</p>
+						<ul>
+							<li>Cadrage technique et étude de faisabilité</li>
+							<li>Architecture monolithe modulaire ou microservices</li>
+							<li>Conception d'API REST, modèle de données</li>
+							<li>Appui technique en avant-vente</li>
+						</ul>
+					</article>
+					<article class="card reveal">
+						<svg class="card-icon" aria-hidden="true"><use href="#i-code"/></svg>
+						<h3>Applications web sur mesure</h3>
+						<p>Logiciels métier, portails et back-offices développés sur un socle éprouvé, testés et livrés par itérations.</p>
+						<ul>
+							<li>Back-end Java / Spring Boot</li>
+							<li>Front-end Angular et TypeScript</li>
+							<li>Applications mobiles Flutter</li>
+							<li>Tests automatisés, documentation, recette</li>
+						</ul>
+					</article>
+					<article class="card reveal">
+						<svg class="card-icon" aria-hidden="true"><use href="#i-refresh"/></svg>
+						<h3>Modernisation et migration</h3>
+						<p>Redonner de l'avenir à une application existante, sans interrompre le service rendu à vos utilisateurs.</p>
+						<ul>
+							<li>Montées de version Java, Spring Boot, Angular</li>
+							<li>Réduction de la dette technique</li>
+							<li>Reprise d'applications et de TMA</li>
+							<li>Découpage progressif d'un existant</li>
+						</ul>
+					</article>
+					<article class="card reveal">
+						<svg class="card-icon" aria-hidden="true"><use href="#i-gauge"/></svg>
+						<h3>Audit, performance et sécurité</h3>
+						<p>Un diagnostic objectif et des recommandations priorisées pour vos applications critiques.</p>
+						<ul>
+							<li>Audit de code et d'architecture</li>
+							<li>Optimisation SQL, cache, temps de réponse</li>
+							<li>Audit de sécurité applicative, analyse de risques</li>
+							<li>Cartographie applicative</li>
+						</ul>
+					</article>
+					<article class="card reveal">
+						<svg class="card-icon" aria-hidden="true"><use href="#i-shield"/></svg>
+						<h3>Identité et authentification</h3>
+						<p>Une gestion des accès unifiée et sécurisée pour l'ensemble de vos applications.</p>
+						<ul>
+							<li>SSO, OpenID Connect, OAuth&nbsp;2</li>
+							<li>Mise en place d'un fournisseur d'identité</li>
+							<li>Intégration LDAP, CAS, IAM existants</li>
+							<li>Gestion fine des droits et des rôles</li>
+						</ul>
+					</article>
+					<article class="card reveal">
+						<svg class="card-icon" aria-hidden="true"><use href="#i-server"/></svg>
+						<h3>DevOps et haute disponibilité</h3>
+						<p>Livrer souvent, sereinement, et garder la plateforme disponible en production.</p>
+						<ul>
+							<li>Intégration et déploiement continus</li>
+							<li>Conteneurs et Kubernetes</li>
+							<li>Haute disponibilité, failover, réplication</li>
+							<li>Supervision, centralisation des logs</li>
+						</ul>
+					</article>
+					<article class="card reveal">
+						<svg class="card-icon" aria-hidden="true"><use href="#i-users"/></svg>
+						<h3>Tech lead et accompagnement</h3>
+						<p>Un renfort expérimenté au sein de votre équipe, sur site ou à distance.</p>
+						<ul>
+							<li>Pilotage technique d'équipes, y compris distribuées</li>
+							<li>Revues de code et bonnes pratiques</li>
+							<li>Interface avec le métier et les architectes</li>
+							<li>Tutorat et montée en compétences</li>
+						</ul>
+					</article>
+					<article class="card reveal">
+						<svg class="card-icon" aria-hidden="true"><use href="#i-graduation"/></svg>
+						<h3>Formation</h3>
+						<p>Des formations concrètes, construites sur vos projets, par des experts qui pratiquent au quotidien.</p>
+						<ul>
+							<li>Java moderne, Spring Boot</li>
+							<li>Angular et TypeScript</li>
+							<li>Tests automatisés et qualité de code</li>
+							<li>Sécurité des applications web</li>
+						</ul>
+					</article>
+					<article class="card reveal">
+						<svg class="card-icon" aria-hidden="true"><use href="#i-cart"/></svg>
+						<h3>E-commerce et CMS</h3>
+						<p>Boutiques en ligne et sites de contenu, avec les intégrations métier qui font la différence.</p>
+						<ul>
+							<li>WooCommerce, PrestaShop</li>
+							<li>Jahia et CMS d'entreprise</li>
+							<li>Tarification B2B, devis, factures</li>
+							<li>Connexion à vos outils (ERP, CRM)</li>
+						</ul>
+					</article>
 				</div>
-				<div class="col-sm-6 wow fadeInUp delay-05s">
-					<div class="contact-info-box email clearfix">
-						<h3><i class="fa-envelope"></i>Email:</h3>
-						<span>contact[@]keepscale.fr</span>
+			</div>
+		</section>
+
+		<section class="section section-alt" id="expertise" aria-labelledby="titre-expertise">
+			<div class="container">
+				<header class="section-head reveal">
+					<p class="eyebrow">Expertise</p>
+					<h2 id="titre-expertise">Des domaines exigeants, des technologies éprouvées</h2>
+					<p>Une expérience forgée dans des contextes où la fiabilité, la sécurité et la confidentialité des données ne se négocient pas.</p>
+				</header>
+				<div class="sectors">
+					<article class="sector reveal">
+						<h3>Santé</h3>
+						<p>Logiciels pour l'officine, messagerie de santé sécurisée, logiciels métier du maintien à domicile, e-commerce de matériel médical.</p>
+					</article>
+					<article class="sector reveal">
+						<h3>Banque et finance</h3>
+						<p>Pilotage technique d'équipes distribuées et évolution de systèmes d'information bancaires.</p>
+					</article>
+					<article class="sector reveal">
+						<h3>Télécoms</h3>
+						<p>Architecture microservices, migration Java&nbsp;17, tests d'intégration automatisés et sécurisation de plateforme.</p>
+					</article>
+					<article class="sector reveal">
+						<h3>Portails et institutions</h3>
+						<p>Portails intranet et internet, applications de gestion, pilotage de tierces maintenances applicatives.</p>
+					</article>
+				</div>
+
+				<h3 class="subhead reveal">Technologies</h3>
+				<div class="stack">
+					<div class="stack-group reveal">
+						<h4>Back-end</h4>
+						<ul class="tags"><li>Java 17 / 21</li><li>Spring Boot</li><li>Spring Security</li><li>JPA / Hibernate</li><li>Jakarta EE</li><li>API REST</li></ul>
 					</div>
-					<div class="contact-info-box hours clearfix">
-						<h3><i class="fa-clock"></i>Horaires:</h3>
-						<span>
-							<strong>Lundi - Vendredi:</strong> 10h - 18h<br/>
-							<strong>Samedi - Dimanche:</strong> Si vous pouviez éviter :)
-						</span>
+					<div class="stack-group reveal">
+						<h4>Front-end et mobile</h4>
+						<ul class="tags"><li>Angular</li><li>TypeScript</li><li>HTML / CSS</li><li>Flutter / Dart</li><li>PHP</li></ul>
+					</div>
+					<div class="stack-group reveal">
+						<h4>Données</h4>
+						<ul class="tags"><li>PostgreSQL</li><li>MySQL</li><li>DB2</li><li>MongoDB</li><li>Neo4j</li><li>Elasticsearch</li></ul>
+					</div>
+					<div class="stack-group reveal">
+						<h4>Infrastructure et DevOps</h4>
+						<ul class="tags"><li>Linux</li><li>Docker</li><li>Kubernetes</li><li>GitLab CI</li><li>Jenkins</li><li>HAProxy</li><li>Keepalived</li><li>Kibana</li><li>Splunk</li></ul>
+					</div>
+					<div class="stack-group reveal">
+						<h4>Identité et sécurité</h4>
+						<ul class="tags"><li>OpenID Connect</li><li>OAuth 2</li><li>SSO CAS</li><li>LDAP</li><li>IAM</li></ul>
+					</div>
+					<div class="stack-group reveal">
+						<h4>CMS et e-commerce</h4>
+						<ul class="tags"><li>WordPress</li><li>WooCommerce</li><li>PrestaShop</li><li>Jahia</li></ul>
 					</div>
 				</div>
 			</div>
 		</section>
-	</div>
-	<footer class="footer">
-		<div class="container">
-			<div class="footer-logo"><a href="#"><img src="img/footer-logo.png" alt=""></a></div>
+
+		<section class="section" id="methode" aria-labelledby="titre-methode">
+			<div class="container">
+				<header class="section-head reveal">
+					<p class="eyebrow">Méthode</p>
+					<h2 id="titre-methode">Une démarche simple et transparente</h2>
+					<p>Une solution juste, sans sur-ingénierie, et une équipe autonome à la fin du projet.</p>
+				</header>
+				<ol class="steps">
+					<li class="reveal">
+						<h3>Échange</h3>
+						<p>Un premier rendez-vous gratuit pour comprendre votre contexte, vos contraintes et vos objectifs.</p>
+					</li>
+					<li class="reveal">
+						<h3>Cadrage</h3>
+						<p>Une proposition claire&nbsp;: périmètre, choix techniques argumentés, planning et budget.</p>
+					</li>
+					<li class="reveal">
+						<h3>Réalisation</h3>
+						<p>Des livraisons régulières et testées, des points d'avancement courts, aucune boîte noire.</p>
+					</li>
+					<li class="reveal">
+						<h3>Transmission</h3>
+						<p>Documentation, passation et formation de vos équipes&nbsp;: le code vous appartient, la maîtrise aussi.</p>
+					</li>
+				</ol>
+			</div>
+		</section>
+
+		<section class="section section-alt" id="engagements" aria-labelledby="titre-engagements">
+			<div class="container">
+				<header class="section-head reveal">
+					<p class="eyebrow">Engagements</p>
+					<h2 id="titre-engagements">Pourquoi travailler avec KeepScale</h2>
+					<p>Une structure à taille humaine, une expertise de haut niveau et des relations simples.</p>
+				</header>
+				<ul class="values">
+					<li class="reveal">
+						<h3>Des experts seniors</h3>
+						<p>Vos interlocuteurs conçoivent et réalisent eux-mêmes&nbsp;: pas d'intermédiaire, pas de sous-traitance en cascade.</p>
+					</li>
+					<li class="reveal">
+						<h3>Le juste nécessaire</h3>
+						<p>Des solutions dimensionnées à vos besoins réels, sans sur-ingénierie ni dépendances superflues.</p>
+					</li>
+					<li class="reveal">
+						<h3>La qualité par défaut</h3>
+						<p>Tests automatisés, revues de code, intégration continue et sécurité prises en compte dès le départ.</p>
+					</li>
+					<li class="reveal">
+						<h3>Transparence totale</h3>
+						<p>Code source, documentation et accès vous appartiennent. Aucun verrouillage technique ou contractuel.</p>
+					</li>
+					<li class="reveal">
+						<h3>Proximité</h3>
+						<p>Basés à Nancy, nous intervenons sur site dans le Grand Est et à distance partout en France.</p>
+					</li>
+					<li class="reveal">
+						<h3>Veille permanente</h3>
+						<p>Conférences, communautés techniques et formation continue&nbsp;: des choix techniques à jour et durables.</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="section" id="faq" aria-labelledby="titre-faq">
+			<div class="container narrow">
+				<header class="section-head reveal">
+					<p class="eyebrow">Questions fréquentes</p>
+					<h2 id="titre-faq">Les réponses à vos questions</h2>
+				</header>
+				<div class="faq reveal">
+					<details>
+						<summary>Intervenez-vous à distance ou sur site&nbsp;?</summary>
+						<p>Les deux. Nous travaillons à distance pour des clients partout en France et intervenons sur site à Nancy et dans le Grand Est, notamment pour les ateliers de cadrage, les audits et les formations.</p>
+					</details>
+					<details>
+						<summary>Pouvez-vous reprendre une application existante&nbsp;?</summary>
+						<p>Oui. Nous commençons par un état des lieux (code, architecture, dépendances, exploitation), puis nous proposons un plan priorisé&nbsp;: corrections urgentes, montées de version, réduction de la dette technique et évolutions fonctionnelles.</p>
+					</details>
+					<details>
+						<summary>Sous quelle forme pouvez-vous intervenir&nbsp;?</summary>
+						<p>Audit court sur quelques jours, mission d'accompagnement ou de tech lead aux côtés de votre équipe, développement au forfait sur un périmètre défini, ou formation sur mesure.</p>
+					</details>
+					<details>
+						<summary>Proposez-vous des formations&nbsp;?</summary>
+						<p>Oui. Nous concevons des formations sur mesure pour les équipes de développement, construites à partir de leurs projets&nbsp;: Java moderne, Spring Boot, Angular, tests automatisés, sécurité et bonnes pratiques.</p>
+					</details>
+					<details>
+						<summary>Combien coûte une prestation&nbsp;?</summary>
+						<p>Chaque besoin est différent. Après un premier échange gratuit et sans engagement, nous vous adressons une proposition chiffrée détaillant le périmètre, le format et le planning.</p>
+					</details>
+				</div>
+			</div>
+		</section>
+
+		<section class="section contact" id="contact" aria-labelledby="titre-contact">
+			<div class="container contact-inner">
+				<div class="reveal">
+					<p class="eyebrow">Contact</p>
+					<h2 id="titre-contact">Parlons de votre projet</h2>
+					<p>Un nouveau développement, une application à moderniser, un audit ou une formation&nbsp;? Décrivez-nous votre besoin en quelques lignes&nbsp;: nous vous répondons rapidement pour convenir d'un premier échange.</p>
+					<a class="btn btn-light" href="mailto:contact@keepscale.fr?subject=Prise%20de%20contact">Écrire un e-mail <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+				</div>
+				<address class="contact-list reveal">
+					<a href="mailto:contact@keepscale.fr"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>contact@keepscale.fr</a>
+					<a href="tel:+33683499705"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>06 83 49 97 05</a>
+					<span><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Nancy, Grand Est — interventions dans toute la France</span>
+				</address>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<p>© <span data-year>2026</span> KeepScale — Architecture et développement d'applications web à Nancy</p>
+			<p><a href="/mentions-legales.html">Mentions légales</a> · Ce site n'utilise ni cookie ni traceur.</p>
 		</div>
 	</footer>
-
-
-	<script type="text/javascript">
-		$(document).ready(function(e) {
-			$('#test').scrollToFixed();
-			$('.res-nav_click').click(function() {
-				$('.main-nav').slideToggle();
-				return false
-
-			});
-
-		});
-	</script>
-
-	<script>
-		wow = new WOW({
-			animateClass: 'animated',
-			offset: 100
-		});
-		wow.init();
-	</script>
-
-
-	<script type="text/javascript">
-		$(window).load(function() {
-
-			$('.main-nav li a, .servicelink').bind('click', function(event) {
-				var $anchor = $(this);
-
-				$('html, body').stop().animate({
-					scrollTop: $($anchor.attr('href')).offset().top - 102
-				}, 1500, 'easeInOutExpo');
-
-				if ($(window).width() < 768) {
-					$('.main-nav').hide();
-				}
-				event.preventDefault();
-			});
-		})
-	</script>
-
-	<script type="text/javascript">
-		$(window).load(function() {
-
-
-			var $container = $('.technoContainer'),
-				$body = $('body'),
-				colW = 200,
-				columns = null;
-
-
-			$container.isotope({
-				// disable window resizing
-				resizable: true,
-				masonry: {
-					columnWidth: colW
-				}
-			});
-
-			$(window).smartresize(function() {
-				// check if columns has changed
-				var currentColumns = Math.floor(($body.width() - 30) / colW);
-				if (currentColumns !== columns) {
-					// set new column count
-					columns = currentColumns;
-					// apply width to container manually, then trigger relayout
-					$container.width(columns * colW)
-						.isotope('reLayout');
-				}
-
-			}).smartresize(); // trigger resize to set container width
-			$('.technoFilter a').click(function() {
-				$('.technoFilter .current').removeClass('current');
-				$(this).addClass('current');
-
-				var selector = $(this).attr('data-filter');
-				$container.isotope({
-
-					filter: selector,
-				});
-				return false;
-			});
-
-		});
-	</script>
-
 </body>
-
 </html>
